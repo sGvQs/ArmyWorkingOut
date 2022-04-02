@@ -15,12 +15,25 @@ class WorkingOutViewController: UIViewController {
         buttonEnabled(start: true, stop: false, send: false)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        startB.layer.cornerRadius = CGFloat(7.0)
+        
+        stopB.layer.cornerRadius = CGFloat(7.0)
+        
+        sendB.layer.cornerRadius = CGFloat(7.0)
+        
+        upDownView.layer.cornerRadius = CGFloat(7.0)
+    }
+    
     @IBOutlet weak var upDownLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var startB: UIButton!
     @IBOutlet weak var stopB: UIButton!
     @IBOutlet weak var sendB: UIButton!
+    @IBOutlet weak var upDownView: UIView!
     
     var upDown: Timer!
     var timey = Timer()
@@ -49,9 +62,12 @@ class WorkingOutViewController: UIViewController {
         let upDownArray: [String] = ["⇧", "☟", "⇧", "☟", "☟", "☟", "⇧", "☟"]
         
         guard let value = upDownArray.randomElement() else { return }
-            upDownLabel.text = value
+           upDownLabel.text = value
         
+        
+            
     }
+    
     
     @objc func update() {
         

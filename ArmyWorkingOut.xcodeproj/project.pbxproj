@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12117C4227F7CBFC00BCFDA7 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12117C4127F7CBFC00BCFDA7 /* IntroViewController.swift */; };
 		12B0075B27E4B2430015D62D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0075A27E4B2430015D62D /* AppDelegate.swift */; };
 		12B0075D27E4B2430015D62D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0075C27E4B2430015D62D /* SceneDelegate.swift */; };
 		12B0075F27E4B2430015D62D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B0075E27E4B2430015D62D /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12117C4127F7CBFC00BCFDA7 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		12B0075727E4B2430015D62D /* ArmyWorkingOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArmyWorkingOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12B0075A27E4B2430015D62D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12B0075C27E4B2430015D62D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				12B0075A27E4B2430015D62D /* AppDelegate.swift */,
 				12B0075C27E4B2430015D62D /* SceneDelegate.swift */,
 				12B0075E27E4B2430015D62D /* ViewController.swift */,
+				12117C4127F7CBFC00BCFDA7 /* IntroViewController.swift */,
 				12B0076027E4B2430015D62D /* Main.storyboard */,
 				12B0078A27E4B2CE0015D62D /* WorkingOutViewController.swift */,
 				12B0076327E4B2450015D62D /* Assets.xcassets */,
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12117C4227F7CBFC00BCFDA7 /* IntroViewController.swift in Sources */,
 				12B0075F27E4B2430015D62D /* ViewController.swift in Sources */,
 				12B0078B27E4B2CE0015D62D /* WorkingOutViewController.swift in Sources */,
 				12B0075B27E4B2430015D62D /* AppDelegate.swift in Sources */,
