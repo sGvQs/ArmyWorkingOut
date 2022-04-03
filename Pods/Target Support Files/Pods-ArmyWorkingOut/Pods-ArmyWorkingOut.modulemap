@@ -1,0 +1,6 @@
+framework module Pods_ArmyWorkingOut {
+  umbrella header "Pods-ArmyWorkingOut-umbrella.h"
+
+  export *
+  module * { export * }
+}

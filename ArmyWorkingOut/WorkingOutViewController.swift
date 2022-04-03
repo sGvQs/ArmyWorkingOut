@@ -12,7 +12,7 @@ class WorkingOutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //start: true, stop: false, reset: false
-        buttonEnabled(start: true, stop: false, send: false)
+        buttonEnabled(start: true, stop: false)
     }
     
     override func viewDidLayoutSubviews() {
@@ -22,8 +22,6 @@ class WorkingOutViewController: UIViewController {
         
         stopB.layer.cornerRadius = CGFloat(7.0)
         
-        sendB.layer.cornerRadius = CGFloat(7.0)
-        
         upDownView.layer.cornerRadius = CGFloat(7.0)
     }
     
@@ -32,17 +30,16 @@ class WorkingOutViewController: UIViewController {
     
     @IBOutlet weak var startB: UIButton!
     @IBOutlet weak var stopB: UIButton!
-    @IBOutlet weak var sendB: UIButton!
     @IBOutlet weak var upDownView: UIView!
+    
     
     var upDown: Timer!
     var timey = Timer()
     var startTime: TimeInterval? = nil
     
-    func buttonEnabled(start: Bool, stop: Bool, send: Bool) {
+    func buttonEnabled(start: Bool, stop: Bool) {
         self.startB.isEnabled = start
         self.stopB.isEnabled = stop
-        self.sendB.isEnabled = send
     }
     
     func animateView(_ viewToAnimate: UIView) {
@@ -83,7 +80,7 @@ class WorkingOutViewController: UIViewController {
     @IBAction func startButton(_ sender: UIButton) {
         
         //start: false, stop: true, reset: false
-        buttonEnabled(start: false, stop: true, send: false)
+        buttonEnabled(start: false, stop: true)
         
       animateView(sender)
         
@@ -99,27 +96,15 @@ class WorkingOutViewController: UIViewController {
     @IBAction func stopButton(_ sender: UIButton) {
         
         //start: true, stop: false, reset: true
-        buttonEnabled(start: true, stop: false, send: true)
+        buttonEnabled(start: true, stop: false)
         
         animateView(sender)
         
         self.upDown.invalidate()
-        self.upDownLabel.text = "fin"
+        self.upDownLabel.text = "well done"
         self.timey.invalidate()
     }
-    
-    @IBAction func sendButton(_ sender: UIButton) {
-        
-        //start: true, stop: false, reset: false
-        buttonEnabled(start: true, stop: false, send: false)
-        
-        animateView(sender)
-        
-        self.upDown.invalidate()
-        self.upDownLabel.text = "fin"
-        self.startTime = nil
-        self.timeLabel.text = "00 : 00 : 00"
-    }
+
     
     
 
